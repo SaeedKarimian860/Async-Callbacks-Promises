@@ -33,3 +33,15 @@ delayedColorChange('purple', 1000, () => {
         })
     })
 });
+
+
+
+searchMoviesAPI('Blues Brothers', () => {
+    saveToMyDB(movies, () => {
+        //if it works, run this:
+    }, () => {
+        //if it doesn't work, run this:
+    })
+}, () => { 
+    //if API is down, or request failed
+})
