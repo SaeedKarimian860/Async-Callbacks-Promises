@@ -15,6 +15,13 @@
 // }, 1000)
 
 
-const delayedColorChange = (newColor, delay) => {
-    setTimeout
+const delayedColorChange = (newColor, delay, doNext) => {
+    setTimeout(() => {
+        document.body.style.backgroundColor = newColor;
+        doNext();
+    }, delay)
 }
+
+delayedColorChange('purple', 1000, () => {
+    console.log('Inside Callback!!')
+});
