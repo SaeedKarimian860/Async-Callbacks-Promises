@@ -23,5 +23,13 @@ const delayedColorChange = (newColor, delay, doNext) => {
 }
 
 delayedColorChange('purple', 1000, () => {
-    console.log('Inside Callback!!')
+    delayedColorChange('orange', 1000, () => {
+        delayedColorChange('blue', 1000, () => {
+            delayedColorChange('green', 1000, () => {
+                delayedColorChange('yellow', 1000, () => {
+        
+                })
+            })
+        })
+    })
 });
