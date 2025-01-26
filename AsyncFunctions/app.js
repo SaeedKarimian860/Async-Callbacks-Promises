@@ -67,13 +67,6 @@ login("BigO") //if you pass in the correct password it will log you in! otherwis
 
 // printRainbow();
 
-
-
-
-
-
-
-
 const fakeRequestPromise = (url) => {
   return new Promise((resolve, reject) => {
     const delay = Math.floor(Math.random() * 4500) + 500;
@@ -94,7 +87,7 @@ async function makeTwoRequests() {
     let data2 = await fakeRequestPromise("/page2");
     console.log(data2);
   } catch (e) {
-        console.log("Caught an Error!")
-        console.log(e)
+    console.log("Caught an Error!");
+    console.log(e);
   }
 }
